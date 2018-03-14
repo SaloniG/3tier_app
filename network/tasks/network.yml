@@ -1,0 +1,10 @@
+#Create Public/Private network
+- os_network:
+    cloud: ospcloud
+    state: present
+    name: "{{ item.network_name }}"
+    external: "{{ item.required }}"
+  with_items:
+    "{{ network }}"
+  register: networkinfo
+ 

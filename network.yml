@@ -1,0 +1,4 @@
+- name: Playbook for Openstack
+  hosts: all
+  roles:
+    - network

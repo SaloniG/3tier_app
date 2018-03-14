@@ -1,0 +1,7 @@
+network_info:
+  - { network_name: 'public',cidr: '10.10.10.0/24' }
+  - { network_name: 'private',cidr: '20.20.20.0/24' }
+network:
+  - { network_name: 'public',required: 'true' }
+  - { network_name: 'private',required: 'false' }
+

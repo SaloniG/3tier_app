@@ -1,0 +1,15 @@
+---
+# tasks file for network
+- include_vars: network_info.yml
+- include_vars: frontend.yaml
+- include_vars: db.yaml
+- include_vars: app1.yaml
+- include_vars: app2.yaml
+#- include_tasks: network.yml
+#- include_tasks: subnet.yml
+#- include_tasks: router.yml
+#- include_tasks: keypair.yml
+#- include_tasks: create_flavor.yml
+#- include_tasks: security_group.yml 
+#- include_tasks: instance.yml
+- include_tasks: fetch_info.yml

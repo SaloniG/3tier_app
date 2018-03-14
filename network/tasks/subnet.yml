@@ -1,0 +1,18 @@
+# Create Public/Private subnet
+- os_subnet:
+    state: present
+    network_name: "{{ item.network_name }}"
+    name: "{{ item.network_name }}"
+    cidr: "{{ item.cidr }}"
+    dns_nameservers:
+       - 8.8.8.7
+       - 8.8.8.8
+    host_routes:
+       - destination: 0.0.0.0/0
+         nexthop: 12.34.56.78
+       - destination: 192.168.0.0/24
+         nexthop: 192.168.0.1
+  with_items:
+    "{{ network_info }}"
+  register: subnetinfo 
+

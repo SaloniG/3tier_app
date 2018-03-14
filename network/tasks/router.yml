@@ -1,0 +1,11 @@
+# Creates a router attached to ext_network1 on an IPv4 subnet and one
+# internal subnet interface.
+- os_router:
+    cloud: ospcloud
+    state: present
+    name: test_router
+    network: public
+    interfaces:
+      - private
+
+
